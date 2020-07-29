@@ -18,4 +18,35 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/nurse" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shadow"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22sp"
+            android:layout_marginBottom="22sp"
+            android:layout_marginTop="20dp"
+            android:text="Previous"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shadow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22sp"
+            android:layout_marginBottom="22sp"
+            android:layout_marginTop="20dp"
+            android:text="Next"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
 </FrameLayout>
