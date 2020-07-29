@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 29
@@ -25,6 +26,7 @@ android {
 
 def nav_version = '2.3.0'
 def lottie_verion = '3.4.0'
+def butter_knife_verion = '10.1.0'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -45,6 +47,10 @@ dependencies {
     // Testing Navigation
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Butter knife data binding
+    implementation "com.jakewharton:butterknife:$butter_knife_verion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butter_knife_verion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
