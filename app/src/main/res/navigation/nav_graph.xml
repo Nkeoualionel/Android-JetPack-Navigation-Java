@@ -13,6 +13,7 @@
 
         <action
             android:id="@+id/action_firstfragment_to_secondfragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
             app:destination="@id/secondFragment"/>
     </fragment>
 
@@ -20,7 +21,32 @@
         android:id="@+id/secondFragment"
         android:name="com.lionelnkeoua.codelabnavigation.view.fragments.SecondFragment"
         android:label="Second"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_secondfragment_to_thirdfragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:destination="@id/thirdFragment"/>
+
+        <action
+            android:id="@+id/action_secondfragment_to_firstfragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:destination="@id/firstFragment"/>
 
     </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.lionelnkeoua.codelabnavigation.view.fragments.ThirdFragment"
+        android:label="Third"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_thirdfragment_to_secondfragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:destination="@id/secondFragment"/>
+
+    </fragment>
+
+
 </navigation>
