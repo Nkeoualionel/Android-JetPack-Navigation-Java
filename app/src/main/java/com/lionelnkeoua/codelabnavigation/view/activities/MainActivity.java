@@ -1,8 +1,10 @@
-package com.lionelnkeoua.codelabnavigation;
+package com.lionelnkeoua.codelabnavigation.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.lionelnkeoua.codelabnavigation.R;
 
 public class MainActivity extends AppCompatActivity {
 
