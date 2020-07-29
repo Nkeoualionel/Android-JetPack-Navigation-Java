@@ -3,11 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/blankFragment">
+    app:startDestination="@id/firstFragment">
 
     <fragment
-        android:id="@+id/blankFragment"
+        android:id="@+id/firstFragment"
         android:name="com.lionelnkeoua.codelabnavigation.view.fragments.FirstFragment"
-        android:label="Blank"
-        tools:layout="@layout/fragment_first" />
+        android:label="First"
+        tools:layout="@layout/fragment_first" >
+
+        <action
+            android:id="@+id/action_firstfragment_to_secondfragment"
+            app:destination="@id/secondFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.lionelnkeoua.codelabnavigation.view.fragments.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_first">
+
+    </fragment>
 </navigation>
