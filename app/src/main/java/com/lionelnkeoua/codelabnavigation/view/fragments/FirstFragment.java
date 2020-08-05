@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import butterknife.OnClick;
 
 import android.view.LayoutInflater;
@@ -33,12 +35,17 @@ public class FirstFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_first, container, false);
         button = view.findViewById(R.id.btn_next);
+        final NavDirections directions = FirstFragmentDirections.actionFirstfragmentToSecondfragment();
+        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_graph_host);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(directions);
+            }
+        });
         return view;
     }
 
 
-    @OnClick(R.id.btn_next)
-    public void nexFragment(){
-        navController.navigate(R.id.action_firstfragment_to_secondfragment);
-    }
 }
