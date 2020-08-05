@@ -42,6 +42,9 @@ public class ThirdFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 previousFragment(direction1);
+
+
+                //Hi here
             }
         });
         return view;
